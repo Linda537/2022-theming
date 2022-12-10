@@ -104,7 +104,9 @@
       {{ content.field_tags }}
     </div>
     <div class="node__main col-md-9 col-lg-8">
-      {{ content|without('comment', 'field_tags') }}
+      <div style="padding-top: 20px; padding-right: 140px">
+        {{ content|without('comment', 'field_tags') }}
+      </div>
     </div>
   </div>
 
