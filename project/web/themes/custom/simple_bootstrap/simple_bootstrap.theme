@@ -43,3 +43,8 @@ function simple_bootstrap_theme_suggestions_user_alter(array &$suggestions, arra
     $suggestions[] = 'user__role__' . $role;
   }
 }
+/**
+* function simple_bootstrap_preprocess_block (&variables){
+* kint(&variables);
+*  if (&variable ['content']['content']
+*} */

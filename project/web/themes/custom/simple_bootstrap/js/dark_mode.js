@@ -6,7 +6,16 @@
                 $('.dark-mode').click(function(){
                     $('body').toggleClass('dark');
 
-                });   
+                    const body_element = document.querySelector ('body');
+                    const button= document.querySelector ('dark-mode');
+                    if (body_element.elemet.classList.contains('dark')){
+                        button.innerHTML('swith to Light');
+                    }
+                    else (body_element.elemet.classList.contains('dark')){
+                        button.innerHTML('swith to Dark');
+                    };
+                }); 
+                  
             });
             
         }
