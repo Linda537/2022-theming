@@ -15,12 +15,28 @@ function simple_bootstrap_preprocess_page_title(&$variables) {
 
   if ($node) {
     if ($node->getType() == "article") {
-      $variables['pretitle'] = t("Articles");
+      $variables['pretitle'] = ("Articles");
     }
     if ($node->getType() == "page") {
       $variables['pretitle'] = $node->field_pretitle->value;
     }
   }
+}
+function hook_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+
+  // Add a checkbox to toggle the breadcrumb trail.
+  $form['CONTACT_INFO'] = [
+    '#type' => 'cDETAILS',
+    '#title' => ('CONTACT INFORMATION'),
+    '#open' => TRUE
+  ];
+  $form['CONTACT_INFO']['phone'] = [
+    '#type' => 'tel',
+    '#title' => ('Phone'),
+    'description' => ('enter phone number using ### ### ####'),
+    '#placeholder' => "123 456 7897"
+  ];
+
 }
 
 /**
