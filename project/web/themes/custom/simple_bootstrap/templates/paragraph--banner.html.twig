@@ -50,7 +50,7 @@
 {% set image_url = file_url(paragraph.field_background_image.0.entity.field_media_image.entity.getFileUri()) %}
 
 {% block paragraph %}
-  <div{{ attributes.addClass(classes).setAttribute("style", "background:url(" ~ image_url ~ ");") }}>
+  <div{{ attributes.addClass(classes).setAttribute("style", "background:url(" ~ image_url ~ "); no-repeat; backgroud-size: cover") }}>
     {% block content %}
     <div class="col-8">
       {{ content.field_text }}
